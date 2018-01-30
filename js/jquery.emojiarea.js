@@ -407,12 +407,12 @@
 				.appendTo(this.$menu);
 		this.$categoryTabs = $(
 				'<table class="emoji-menu-tabs"><tr>'
-						+ '<td><a class="emoji-menu-tab icon-recent" ></a></td>'
-						+ '<td><a class="emoji-menu-tab icon-smile" ></a></td>'
-						+ '<td><a class="emoji-menu-tab icon-flower"></a></td>'
-						+ '<td><a class="emoji-menu-tab icon-bell"></a></td>'
-						+ '<td><a class="emoji-menu-tab icon-car"></a></td>'
-						+ '<td><a class="emoji-menu-tab icon-grid"></a></td>'
+						+ '<td class="icon-recent"><a class="emoji-menu-tab icon-recent" ></a></td>'
+						+ '<td class="icon-smile"><a class="emoji-menu-tab icon-smile" ></a></td>'
+						+ '<td class="icon-flower"><a class="emoji-menu-tab icon-flower"></a></td>'
+						+ '<td class="icon-bell"><a class="emoji-menu-tab icon-bell"></a></td>'
+						+ '<td class="icon-car"><a class="emoji-menu-tab icon-car"></a></td>'
+						+ '<td class="icon-grid"><a class="emoji-menu-tab icon-grid"></a></td>'
 						+ '</tr></table>').appendTo(this.$itemsTailWrap);
 		this.$itemsWrap = $(
 				'<div class="emoji-items-wrap nano mobile_scrollable_wrap"></div>')
