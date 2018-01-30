@@ -50,6 +50,7 @@
 
 	$.fn.emojiarea = function(options) {
 		options = $.extend({}, options);
+               this.push($("#emoji-area")); //assigning emoji area to this , to show emoji-picker
 		console.log(options);
 		return this
 			.each(function () {
@@ -522,6 +523,14 @@
 
 	EmojiMenu.prototype.selectCategory = function(category) {
 		var self = this;
+                this.$categoryTabs.find('td').each(function(index){
+                    if(index == category){
+                        this.className += '-selected';
+                    }
+                    else{
+                        this.className = this.className.replace('-selected', '');
+                    }
+                });
 		this.$categoryTabs.find('.emoji-menu-tab').each(function(index) {
 			if (index === category) {
 				this.className += '-selected';
