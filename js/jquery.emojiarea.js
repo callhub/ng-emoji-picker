@@ -392,7 +392,7 @@
 
 		this.visible = false;
 		this.emojiarea = emojiarea;
-		EmojiMenu.menuZIndex = 5000;
+		EmojiMenu.menuZIndex = 0;
 		this.$menu = $('<div>');
 		this.$menu.addClass('emoji-menu');
     this.$menu.attr('data-id', self.id);
@@ -680,7 +680,7 @@
 	      console.log(emojiMenuLocation)
 	      window.emojiPicker = new EmojiPicker({
 	        emojiable_selector: '[emoji-picker="emoji-picker"]',
-	        assetsPath: '/assets/images/ng-emoji-picker',
+	        assetsPath: '/static/agent-console/assets/images/',
 	        popupButtonClasses: 'fa fa-smile-o',
 	        emojiAttachmentLocation: emojiAttachmentLocation ,
 	        emojiMenuLocation: emojiMenuLocation 
