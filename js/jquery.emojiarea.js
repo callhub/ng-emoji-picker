@@ -50,7 +50,8 @@
 
 	$.fn.emojiarea = function(options) {
 		options = $.extend({}, options);
-               this.push($("#emoji-area")); //assigning emoji area to this , to show emoji-picker
+               this.push($("#emoji-area")); //assigning emoji area to this , to show emoji-picker in tablet and mobile versions
+               this.push($("#emoji-area-desktop")); //assigning emoji area to this , to show emoji-picker in desktop version
 		console.log(options);
 		return this
 			.each(function () {
@@ -692,5 +693,28 @@
 	    }
 	  };
 	})
+
+	ngEmojiPicker.directive('emojiPickerDesktop',function($parse){
+      return{
+        link: function(scope, element, attrs){
+          console.log(attrs)
+          var emojiAttachmentLocation = attrs["emojiAttachmentLocation"] || "bottom right";
+          var emojiMenuLocation = attrs["emojiMenuLocation"] || "top left";
+          console.log(emojiAttachmentLocation)
+          console.log(emojiMenuLocation)
+          window.emojiPickerDesktop = new EmojiPicker({
+            emojiable_selector: '[emoji-picker="emoji-picker"]',
+            assetsPath: '/static/agent-console/assets/images/',
+            popupButtonClasses: 'fa fa-smile-o',
+            emojiAttachmentLocation: emojiAttachmentLocation ,
+            emojiMenuLocation: emojiMenuLocation 
+          });
+          // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+          // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
+          // It can be called as many times as necessary; previously converted input fields will not be converted again
+          window.emojiPickerDesktop.discover();
+        }
+      };
+    })
 
 })(jQuery, window, document);

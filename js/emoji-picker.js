@@ -17,7 +17,8 @@
 
     EmojiPicker.prototype.discover = function() {
       var isiOS;
-      isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      // isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      isiOS = /iPad|iPhone|iPod|iPad Simulator|iPhone Simulator|iPod Simulator/.test(navigator.userAgent) && !window.MSStream;
       if (isiOS) {
         return;
       }
