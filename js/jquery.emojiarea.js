@@ -681,7 +681,7 @@
 	      console.log(emojiMenuLocation)
 	      window.emojiPicker = new EmojiPicker({
 	        emojiable_selector: '[emoji-picker="emoji-picker"]',
-	        assetsPath: '/static/agent-console/assets/images/',
+	        assetsPath: '/static/agent-console/assets/images',
 	        popupButtonClasses: 'fa fa-smile-o',
 	        emojiAttachmentLocation: emojiAttachmentLocation ,
 	        emojiMenuLocation: emojiMenuLocation 
@@ -704,7 +704,7 @@
           console.log(emojiMenuLocation)
           window.emojiPickerDesktop = new EmojiPicker({
             emojiable_selector: '[emoji-picker="emoji-picker"]',
-            assetsPath: '/static/agent-console/assets/images/',
+            assetsPath: '/static/agent-console/assets/images',
             popupButtonClasses: 'fa fa-smile-o',
             emojiAttachmentLocation: emojiAttachmentLocation ,
             emojiMenuLocation: emojiMenuLocation 
